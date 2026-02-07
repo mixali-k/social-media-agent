@@ -41,14 +41,16 @@ Ensure you do not make this section more than 3-6 words.
  * You should make this prompt very specific to the type of content you
  * want included/focused on in the posts.
  */
-export const POST_CONTENT_RULES = `- Focus your post on what the content covers, aims to achieve, or the findings of the marketing report. This should be concise and high level.
-- Do not make the post over technical as some of our audience may not be advanced developers, but ensure it is technical enough to engage developers.
-- Keep posts short, concise and engaging
+export const POST_CONTENT_RULES = `- Focus your post on what the content covers, aims to achieve, or the key findings from the marketing report. This should be concise and high level.
+- Keep posts professional but accessible - our audience includes building managers, facilities managers, and property professionals who may not be fire safety experts.
+- Keep posts short, concise and engaging.
 - Limit the use of emojis to the post header, and optionally in the call to action.
 - NEVER use hashtags in the post.
-- ALWAYS use present tense to make announcements feel immediate (e.g., "Microsoft just launched..." instead of "Microsoft launches...").
+- ALWAYS use present tense to make announcements feel immediate.
 - ALWAYS include the link to the content being promoted in the call to action section of the post.
-- You're acting as a human, posting for other humans. Keep your tone casual and friendly. Don't make it too formal or too consistent with the tone.`;
+- You're acting as Atlas Fire, a professional fire safety company. Keep your tone professional but approachable and educational. Use UK English spelling (e.g., "organisation" not "organization").
+- When discussing regulations, be accurate about which specific regulations apply (Building Safety Act 2022, Fire Safety England Regulations 2022, etc.).
+- Emphasise the importance of compliance and working with certified contractors (like FIRAS-certified companies).`;
 
 /**
  * This should contain "business content" into the type of content you care
@@ -58,16 +60,36 @@ export const POST_CONTENT_RULES = `- Focus your post on what the content covers,
  * for a business, it should contain details about your products/offerings/business.
  */
 export const BUSINESS_CONTEXT = `
-Here is some context about the types of content you should be interested in prompting:
+Here is some context about Atlas Fire and the types of content you should be interested in promoting:
 <business-context>
-- AI applications. You care greatly about all new and novel ways people are using AI to solve problems.
-- UI/UX for AI. You are interested in how people are designing UI/UXs for AI applications.
-- New AI/LLM research. You want your followers to always be up to date with the latest in AI research.
-- Agents. You find agents very interesting and want to always be up to date with the latest in agent implementations and systems.
-- Multi-modal AI. You're deeply invested in how multi-modal LLMs can be used in AI applications.
-- Generative UI. You're interested in how developers are using generative UI to enhance their applications.
-- Development software for building AI applications.
-- Open source AI/LLM projects, tools, frameworks, etc.
+Atlas Fire is a London-based FIRAS-certified passive fire protection specialist. We focus ONLY on passive fire protection - NOT active fire protection (alarms, sprinklers, extinguishers).
+
+Our core services:
+- Fire door inspections and remediation
+- Fire stopping and compartmentation surveys
+- Penetration seals (service penetrations through fire-rated walls/floors)
+- Intumescent products and applications
+- Compartmentation surveys
+- Fire risk assessments (focused on passive measures)
+
+Content types we care about:
+- UK fire safety regulations and compliance updates (Building Safety Act 2022, Fire Safety England Regulations 2022)
+- Post-Grenfell Tower fire safety developments
+- Passive fire protection industry news and framework contracts
+- Fire door standards (BS 8214) and best practices
+- Compartmentation and fire stopping technical content
+- Third-party certification importance (FIRAS accreditation)
+- Building safety case requirements for high-rise residential buildings
+- Social housing fire safety compliance
+- Educational content about passive fire protection
+
+Target audience:
+- Building managers and facilities managers
+- Housing associations and local authorities
+- Property developers, architects and specifiers
+- Commercial property owners
+
+Tone: Professional, authoritative but approachable. Educational without being condescending. UK English spelling.
 </business-context>`;
 
 /**
@@ -75,14 +97,17 @@ Here is some context about the types of content you should be interested in prom
  * validating content for social media posts. This prompt should outline the
  * rules for what content should be approved/rejected.
  */
-export const CONTENT_VALIDATION_PROMPT = `This content will be used to generate engaging, informative and educational social media posts.
+export const CONTENT_VALIDATION_PROMPT = `This content will be used to generate engaging, informative and educational social media posts for Atlas Fire, a passive fire protection specialist.
 The following are rules to follow when determining whether or not to approve content as valid, or not:
 <validation-rules>
-- The content may be about a new product, tool, service, or similar.
-- The content is a blog post, or similar content of which, the topic is AI, which can likely be used to generate a high quality social media post.
-- The goal of the final social media post should be to educate your users, or to inform them about new content, products, services, or findings about AI.
-- You should NOT approve content from users who are requesting help, giving feedback, or otherwise not clearly about software for AI.
-- You only want to approve content which can be used as marketing material, or other content to promote the content above.
+- The content should be about fire safety, building safety, passive fire protection, or related regulations.
+- Content about fire doors, compartmentation, fire stopping, penetration seals, intumescent products, or fire risk assessments is highly relevant.
+- Content about UK fire safety regulations (Building Safety Act, Fire Safety England Regulations, BS 8214, etc.) is highly relevant.
+- Industry news about fire safety contracts, framework deals, or passive fire protection services is relevant.
+- Content about post-Grenfell fire safety improvements or building safety developments is relevant.
+- The goal of the final social media post should be to educate building managers and property professionals about fire safety compliance, or to inform them about industry developments.
+- You should NOT approve content that is purely about active fire protection (alarms, sprinklers, extinguishers) unless it also covers passive fire protection topics.
+- You should approve content which can be used as educational or thought leadership material for fire safety professionals.
 </validation-rules>`;
 
 export function getPrompts() {

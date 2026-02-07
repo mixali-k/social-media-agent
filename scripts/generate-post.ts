@@ -11,7 +11,7 @@ import {
  * This may be modified to generate posts for other content.
  */
 async function invokeGraph() {
-  const link = "https://github.com/rguthaa/genai-usecases/tree/main";
+  const link = "https://www.constructionenquirer.com/2025/12/18/33-firms-wins-300m-sec-fire-safety-framework/";
 
   const client = new Client({
     apiUrl: process.env.LANGGRAPH_API_URL || "http://localhost:54367",
@@ -28,8 +28,8 @@ async function invokeGraph() {
         // [TWITTER_USER_ID]: process.env.TWITTER_USER_ID,
         // [LINKEDIN_USER_ID]: process.env.LINKEDIN_USER_ID,
         // This ensures the graph runs in a basic text only mode.
-        // If you followed the full setup instructions, you may remove this line.
-        [TEXT_ONLY_MODE]: false,
+        // Set to true to skip image processing (bypasses Supabase requirement)
+        [TEXT_ONLY_MODE]: true,
         // These will skip content relevancy checks and used URLs checks
         [SKIP_CONTENT_RELEVANCY_CHECK]: true,
         [SKIP_USED_URLS_CHECK]: true,

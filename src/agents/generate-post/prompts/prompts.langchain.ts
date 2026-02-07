@@ -1,119 +1,118 @@
-import { LANGCHAIN_DOMAINS } from "../../should-exclude.js";
-
 export const BUSINESS_CONTEXT = `
-Here is some context about the different LangChain products and services:
+Here is some context about Atlas Fire and our services:
 <business-context>
-- **LangChain** - the main open source libraries developers use for building AI applications. These are open source Python/JavaScript/TypeScript libraries.
-- **LangGraph** - an open source library for building agentic AI applications. This is a Python/JavaScript/TypeScript library.
-  LangChain also offers a hosted cloud platform called 'LangGraph Cloud' or 'LangGraph Platform' which developers can use to host their LangGraph applications in production.
-- **LangSmith** - this is LangChain's SaaS product for building AI applications. It offers solutions for evaluating AI systems, observability, datasets and testing.
+- **Atlas Fire** is a London-based PASSIVE FIRE PROTECTION specialist. We are FIRAS certified.
+- We do NOT provide active fire protection (alarms, sprinklers, extinguishers).
+- Our core services include:
+  - Fire door inspections and remediation
+  - Fire stopping and compartmentation
+  - Penetration seals (service penetrations through fire-rated walls/floors)
+  - Intumescent products and applications
+  - Fire risk assessments (focused on passive measures)
+  - Compartmentation surveys
+- Industry context: Post-Grenfell Tower tragedy regulations, Building Safety Act 2022 compliance, Fire Safety (England) Regulations 2022, BS 8214 (fire door maintenance)
+- Our target audience: Building managers, facilities managers, housing associations, local authorities, property developers, architects
 </business-context>`;
 
-export const CONTENT_VALIDATION_PROMPT = `This content will be used to generate engaging, informative and educational social media posts.
+export const CONTENT_VALIDATION_PROMPT = `This content will be used to generate engaging, informative and educational social media posts for Atlas Fire.
 The following are rules to follow when determining whether or not to approve content as valid, or not:
 <validation-rules>
-- The content should be about a new product, tool, service, or similar.
-- You should NOT approve content from users who are requesting help, giving feedback, or otherwise not clearly about software which uses the LangChain ecosystem.
-- You should NOT approve content that is showing an error, or specific problematic issue with one of LangChain's products or services.
-- The content should be about AI, or software related to AI/LLMs in some way. LangChain is an AI software development company, so you should NOT approve content from users which are not at least somewhat related to AI.
-- Content which includes LangChain's products or services but is not focused on LangChain's products or services should be approved. As LangChain's products or services plays a part in the content, you should approve it.
-- The content must include some mention or usage of at least one of LangChain's products and services, or LangGraph's products and services. The following is a full list of LangChain products/services you should likely approve if mentioned:
-  - LangChain
-  - LangGraph
-  - LangSmith
-  - Prompt Hub
-  - Social Media Agent
-  - Executive AI Assistant/Email Assistant
-  - Chat LangChain
-  - Open Canvas
-- If the content outlines how it uses LangChain's products in the making of it, but LangChain is not the main focus, you should approve it.
-- We want to promote all content/products/services if they use LangChain's products to make them.
+- The content should be related to fire safety, building safety, or passive fire protection.
+- Approve content about: fire doors, compartmentation, fire stopping, penetration seals, intumescent products, fire risk assessments, Building Safety Act, Grenfell-related regulations, BS 8214, fire safety training, responsible person duties.
+- Approve industry news about fire safety regulations, HSE guidance, building safety legislation, and fire safety standards.
+- Approve educational content about fire safety best practices, compliance requirements, and building safety.
+- Do NOT approve content that is off-topic (unrelated to fire safety or building safety).
+- Do NOT approve content that promotes competitors or disparages the industry.
+- Content from government sources (gov.uk, HSE) about fire regulations should be approved.
+- Content from industry bodies (FPA, ASFP, IFC) should be approved.
+- Construction industry news that relates to fire safety should be approved.
 </validation-rules>`;
 
 export const TWEET_EXAMPLES = `<example index="1">
-LangChain Community Spotlight: Podcastfy.ai 🎙️🤖
+Major Fire Safety Framework Win 🔥
 
-An Open Source API alternative to NotebookLM's podcast product
+33 firms secure places on the £300m SEC fire safety framework
 
-Transforming Multimodal Content into Captivating Multilingual Audio Conversations with GenAI
+This demonstrates the growing investment in fire safety compliance following the Building Safety Act
 
-https://podcastfy.ai
+Read more: https://example.com/article
 </example>
 
 <example index="2">
-LangChain Community Spotlight: Complex SQL Joins with LangGraph and Waii 🧱
+Fire Door Inspection Reminder 🚪
 
-Waii is a toolkit that provides text-to-SQL and text-to-chart capabilities
+Under the Fire Safety (England) Regulations 2022, responsible persons must ensure fire doors in communal areas are checked quarterly
 
-This post focuses on Waii's approach to handling complex joins in databases, doing so within LangGraph
+Key checkpoints:
+- Intumescent strips intact
+- Self-closer functioning
+- Gaps within tolerance
+- No damage to leaf or frame
 
-https://waii.com
+Contact us for professional fire door surveys.
 </example>
 
 <example index="3">
-LangChain Community Spotlight: Build agents that can interact with any website 🌐
+Building Safety Act Update 📋
 
-Check out this video by @DendriteSystems showing how to build an agent that can interact with websites just like a human would!
+Important deadline approaching for higher-risk buildings
 
-This video demonstrates a workflow that:
+Building owners must now register with the Building Safety Regulator
 
-- Finds competitors on Product Hunt and Hacker News
-- Drafts an email about new competitors
-- Sends the email via Outlook
+This affects residential buildings 18m+ with at least 2 residential units
 
-📺 Video: https://youtube.com/watch?v=BGvqeRB4Jpk
-🧠 Repo: https://github.com/dendrite-systems/dendrite-examples
+Ensure your passive fire protection is documented and compliant.
 </example>
 
 <example index="4">
-LangChain Community Spotlight: RepoGPT 🚀
+Compartmentation: Why It Matters 🏢
 
-RepoGPT is an open-source, AI-powered assistant
+Compartmentation divides buildings into fire-resistant sections, containing fire spread and protecting escape routes
 
-Chat with your repositories using natural language to get insights, generate documentation, or receive code suggestions
+Common issues we find:
+- Unsealed service penetrations
+- Missing fire stopping
+- Damaged fire doors
 
-https://repogpt.com
+A compartmentation survey identifies these risks before they become emergencies.
 </example>
 
 <example index="5">
-LangChain Community Spotlight: AI Travel Agent ✈️
+FIRAS Certification Explained ✅
 
-This is one of the most comprehensive examples we've seen of a LangGraph agent. It's specifically designed to be a real world practical use case
+When choosing a passive fire protection contractor, look for FIRAS certification
 
-Features
-- Stateful Interactions
-- Human-in-the-Loop
-- Dynamic LLMs
-- Email Automation
+FIRAS-certified contractors are independently audited to ensure installations meet manufacturer specifications and British Standards
 
-https://github.com/nirbar1985/ai-travel-agent
+This third-party verification protects building owners and occupants.
 </example>`;
 
 export const POST_STRUCTURE_INSTRUCTIONS = `The post should have three main sections, outlined below:
 <structure-instructions>
 
 <section key="1">
-The first part of the post is the header. It MUST start with "LangChain Community Spotlight:" followed by the name of the content/project, and one to two emojis. The project name should be short and concise. If the marketing report does not specify a name, you should get creative and come up with a catchy title for it. Example format: "LangChain Community Spotlight: Project Name 🚀"
+The first part of the post is the header. It should be a short, attention-grabbing headline about the content, followed by one to two relevant emojis. Keep it concise and professional. Example format: "Fire Door Compliance Update 🚪" or "Building Safety Act News 📋"
 </section>
 
 <section key="2">
-This section will contain the main content of the post. The post body should contain a concise, high-level overview of the content/product/service outlines in the marketing report.
-It should focus on what the content does, or the problem it solves. Also include details on how the content implements LangChain's product(s) and why these products are important to the application.
-Ensure this is short, no more than 3 sentences. Optionally, if the content is very technical, you may include bullet points covering the main technical aspects of the content.
-You should NOT make the main focus of this on LangChain, but instead on the content itself. Remember, the content/product/service outlined in the marketing report is the main focus of this post.
+This section will contain the main content of the post. The post body should contain a concise, high-level overview of the content outlined in the marketing report.
+It should focus on what the content covers, why it matters for fire safety or building compliance, and what the key takeaways are.
+Ensure this is short, no more than 3 sentences. Optionally, if the content is technical, you may include bullet points covering the main points.
+Remember to position Atlas Fire as a knowledgeable, helpful resource in the fire safety industry.
 </section>
 
 <section key="3">
-The final section of the post should contain a call to action. This should be a short sentence that encourages the reader to click the link to the content being promoted. Optionally, you can include an emoji here.
+The final section of the post should contain a call to action. This could be encouraging readers to read the full article, contact Atlas Fire for more information, or consider their own fire safety compliance. Optionally, you can include an emoji here.
 </section>
 
 </structure-instructions>`;
 
-export const POST_CONTENT_RULES = `- Focus your post on what the content covers, aims to achieve, and how it uses LangChain's product(s) to do that. This should be concise and high level.
-- Do not make the post over technical as some of our audience may not be advanced developers, but ensure it is technical enough to engage developers.
-- Keep posts short, concise and engaging
+export const POST_CONTENT_RULES = `- Focus your post on what the content covers, why it matters for fire safety, and key takeaways for building managers and property owners.
+- Keep posts accessible - avoid overly technical jargon, but maintain professional credibility.
+- Keep posts short, concise and engaging.
 - Limit the use of emojis to the post header, and optionally in the call to action.
 - NEVER use hashtags in the post.
-- ALWAYS use present tense to make announcements feel immediate (e.g., "Microsoft just launched..." instead of "Microsoft launches...").
-- ALWAYS include at least one link to the content being promoted in the call to action section of the post.
-- If the call to action links to a domain owned by LangChain (${LANGCHAIN_DOMAINS.map((domain) => `"${domain}"`).join(", ")}), use first person pronouns (e.g., "We released...", "Our latest...") since you're posting from the LangChain account about LangChain's own content.`;
+- ALWAYS use present tense to make announcements feel immediate.
+- ALWAYS include the link to the content being promoted.
+- Position Atlas Fire as a knowledgeable, helpful resource - not salesy.
+- When relevant, mention how the topic relates to passive fire protection services like fire doors, compartmentation, or fire stopping.`;
